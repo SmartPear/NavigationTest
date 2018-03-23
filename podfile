@@ -1,0 +1,4 @@
+platform :ios, '7.0'
+target 'NavigationTest' do
+pod 'MBProgressHUD'
+end
