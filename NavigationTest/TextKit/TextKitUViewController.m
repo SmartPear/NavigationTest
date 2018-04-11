@@ -8,7 +8,7 @@
 
 #import "TextKitUViewController.h"
 
-@interface TextKitUViewController ()<NSLayoutManagerDelegate>
+@interface TextKitUViewController ()<NSLayoutManagerDelegate,UITextViewDelegate>
 @property (nonatomic,strong) UITextView * textView;
 @property (nonatomic,strong) NSLayoutManager * lManger;
 @property (nonatomic,strong) NSTextContainer * textContainer;
@@ -24,7 +24,7 @@
     [self.view addSubview:self.textView];
     [self.lManger addTextContainer:self.textContainer];
     [self.textView.textStorage addLayoutManager:self.lManger];
-    // Do any additional setup after loading the view.
+    self.textView.delegate = self;
 }
 //
 -(void)layoutManagerDidInvalidateLayout:(NSLayoutManager *)sender{
@@ -38,13 +38,18 @@
         _lManger.delegate  = self;
     }return _lManger;
 }
+
 -(UITextView *)textView{
     if (!_textView) {
         _textView = [[UITextView alloc]init];
         _textView.frame = CGRectMake(0, 0, 300, 300);
         _textView.center = self.view.center;
+        _textView.text = @"少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军少时诵诗书所所所所所所所所所所所所所付口破所扩过付铺所都军过铺都所军奥过破奥军过破多军破过军奥所铺够军奥破军";
+        _textView.font = [UIFont systemFontOfSize:18];
+        
     }return _textView;
 }
+
 -(NSTextContainer *)textContainer{
     if (!_textContainer) {
         _textContainer = [[NSTextContainer alloc]initWithSize:CGSizeMake(300, 300)];

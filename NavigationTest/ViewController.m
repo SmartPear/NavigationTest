@@ -30,8 +30,9 @@
     self.navigationItem.title = @"自主学习";
     self.tableview.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     
