@@ -519,7 +519,6 @@
 		03A50636202AEA3E00BBEAFD /* UIViewController+Caterory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50635202AEA3E00BBEAFD /* UIViewController+Caterory.m */; };
 		03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B02046462B0096810F /* CollectionViewController.m */; };
 		03CFC7B52046A1730096810F /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B42046A1730096810F /* FlowLayout.m */; };
-		03CFC7B72046ACF60096810F /* 屏幕快照 2018-02-28 下午5.24.56.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CFC7B62046ACF60096810F /* 屏幕快照 2018-02-28 下午5.24.56.png */; };
 		03CFC7BA2046AD2C0096810F /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B92046AD2C0096810F /* CustomCollectionViewCell.m */; };
 		03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */; };
 		03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA3392204CE0510060FC7F /* TextKitUViewController.m */; };
@@ -1076,7 +1075,6 @@
 		03CFC7B02046462B0096810F /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		03CFC7B32046A1730096810F /* FlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
 		03CFC7B42046A1730096810F /* FlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
-		03CFC7B62046ACF60096810F /* 屏幕快照 2018-02-28 下午5.24.56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2018-02-28 下午5.24.56.png"; sourceTree = "<group>"; };
 		03CFC7B82046AD2C0096810F /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		03CFC7B92046AD2C0096810F /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		03E64A00205F58270041AFCE /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -1713,7 +1711,6 @@
 				03A50600202AE66E00BBEAFD /* AppDelegate.m */,
 				03A50602202AE66E00BBEAFD /* ViewController.h */,
 				03A50603202AE66E00BBEAFD /* ViewController.m */,
-				03CFC7B62046ACF60096810F /* 屏幕快照 2018-02-28 下午5.24.56.png */,
 				03578BA12043A64F0009D91C /* CoreFoundationViewController.h */,
 				03578BA22043A64F0009D91C /* CoreFoundationViewController.m */,
 				031EA5E62075EA760042E7A9 /* TideLayer */,
@@ -2087,7 +2084,6 @@
 				031EA5A02075E8600042E7A9 /* 拼接_249.jpg in Resources */,
 				0312C751205A65E5002323DD /* 西狭颂017.jpg in Resources */,
 				031EA50F2075E8600042E7A9 /* 拼接_434.jpg in Resources */,
-				03CFC7B72046ACF60096810F /* 屏幕快照 2018-02-28 下午5.24.56.png in Resources */,
 				031EA5A62075E8600042E7A9 /* 拼接_129.jpg in Resources */,
 				031EA4FC2075E8600042E7A9 /* 拼接_421.jpg in Resources */,
 				031EA5032075E8600042E7A9 /* 拼接_70.jpg in Resources */,
