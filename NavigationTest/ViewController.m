@@ -30,7 +30,20 @@
     self.navigationItem.title = @"自主学习";
     self.tableview.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
+    NSLog(@"%@",[self transformToPinyinTone:@"戏"]);
+}
+- (NSString *)transformToPinyinTone:(NSString*)str
+{
+    // 空值判断
+    if (str == nil && str.length == 0 && str == NULL) {
+        return @"";
+    }
+    // 将字符串转为NSMutableString类型
+    NSMutableString *string = [str mutableCopy];
+    // 将字符串转换为拼音音调格式
+    CFStringTransform((__bridge CFMutableStringRef)string, NULL, kCFStringTransformMandarinLatin, NO);
+    // 返回带声调拼音字符串
+    return string;
 }
 
 
@@ -57,6 +70,14 @@
     NSString * text = self.dataArr[indexPath.row];
     cell.textLabel.text = text;
     return cell;
+}
+- (NSString *)transform:(NSString *)chinese {
+    
+    NSMutableString *pinyin = [chinese mutableCopy];
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripCombiningMarks, NO);
+    NSLog(@"%@", pinyin);
+    return [pinyin uppercaseString];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
