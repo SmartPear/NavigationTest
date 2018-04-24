@@ -76,6 +76,7 @@
 		03DD19D0208EBEC5003D5D61 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19CF208EBEC5003D5D61 /* MainViewController.m */; };
 		03DD19D3208EC00E003D5D61 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19D2208EC00E003D5D61 /* UserViewController.m */; };
 		03DD19D6208F0E04003D5D61 /* UIViewController+SlidMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */; };
+		03DD19DB208F2250003D5D61 /* PNChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19DA208F2250003D5D61 /* PNChartViewController.m */; };
 		03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */; };
 		03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA3392204CE0510060FC7F /* TextKitUViewController.m */; };
 		B296A008A30CABE18B6DBAD8 /* libPods-NavigationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5646510E1D18309CE6FF714 /* libPods-NavigationTest.a */; };
@@ -193,6 +194,9 @@
 		03DD19D2208EC00E003D5D61 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		03DD19D4208F0E04003D5D61 /* UIViewController+SlidMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SlidMenu.h"; sourceTree = "<group>"; };
 		03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SlidMenu.m"; sourceTree = "<group>"; };
+		03DD19D7208F21D9003D5D61 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		03DD19D9208F2250003D5D61 /* PNChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNChartViewController.h; sourceTree = "<group>"; };
+		03DD19DA208F2250003D5D61 /* PNChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNChartViewController.m; sourceTree = "<group>"; };
 		03E64A00205F58270041AFCE /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		03EA3391204CE0510060FC7F /* TextKitUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextKitUViewController.h; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 		03578BA62043DC4D0009D91C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				03DD19D4208F0E04003D5D61 /* UIViewController+SlidMenu.h */,
+				03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */,
 				03E64A00205F58270041AFCE /* MBProgressHUD+Add.h */,
 				03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */,
 				03A50634202AEA3E00BBEAFD /* UIViewController+Caterory.h */,
@@ -372,6 +378,7 @@
 				03A50600202AE66E00BBEAFD /* AppDelegate.m */,
 				03578BA12043A64F0009D91C /* CoreFoundationViewController.h */,
 				03578BA22043A64F0009D91C /* CoreFoundationViewController.m */,
+				03DD19D8208F223C003D5D61 /* PNChart */,
 				03DD19CD208EBEA7003D5D61 /* MainController */,
 				03DBF23320849EE300975EAA /* NSPredicate */,
 				031EA5E62075EA760042E7A9 /* TideLayer */,
@@ -381,6 +388,7 @@
 				03578BA62043DC4D0009D91C /* Category */,
 				0339DD0D204928DC000C7979 /* RealmTest */,
 				03A50608202AE66E00BBEAFD /* Assets.xcassets */,
+				03DD19D7208F21D9003D5D61 /* PrefixHeader.pch */,
 				03A5060A202AE66E00BBEAFD /* LaunchScreen.storyboard */,
 				03A5060D202AE66E00BBEAFD /* Info.plist */,
 				03A5060E202AE66E00BBEAFD /* main.m */,
@@ -438,12 +446,19 @@
 				03A50603202AE66E00BBEAFD /* ViewController.m */,
 				03DD19CE208EBEC5003D5D61 /* MainViewController.h */,
 				03DD19CF208EBEC5003D5D61 /* MainViewController.m */,
-				03DD19D4208F0E04003D5D61 /* UIViewController+SlidMenu.h */,
-				03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */,
 				03DD19D1208EC00E003D5D61 /* UserViewController.h */,
 				03DD19D2208EC00E003D5D61 /* UserViewController.m */,
 			);
 			path = MainController;
+			sourceTree = "<group>";
+		};
+		03DD19D8208F223C003D5D61 /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				03DD19D9208F2250003D5D61 /* PNChartViewController.h */,
+				03DD19DA208F2250003D5D61 /* PNChartViewController.m */,
+			);
+			path = PNChart;
 			sourceTree = "<group>";
 		};
 		03EA3390204CE03C0060FC7F /* TextKit */ = {
@@ -710,6 +725,7 @@
 				03DBF23620849F0000975EAA /* NSPredicateController.m in Sources */,
 				03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */,
 				037232972064BDED0000BD39 /* CornerTextView.m in Sources */,
+				03DD19DB208F2250003D5D61 /* PNChartViewController.m in Sources */,
 				0339DD13204929C0000C7979 /* Person.m in Sources */,
 				03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */,
 				03A5060F202AE66E00BBEAFD /* main.m in Sources */,
@@ -885,6 +901,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NavigationTest/FrameWork",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/wangxin/Desktop/第三方/NavigationTest/NavigationTest/PrefixHeader.pch";
 				INFOPLIST_FILE = NavigationTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.NavigationTest";
@@ -904,6 +923,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NavigationTest/FrameWork",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/wangxin/Desktop/第三方/NavigationTest/NavigationTest/PrefixHeader.pch";
 				INFOPLIST_FILE = NavigationTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.NavigationTest";

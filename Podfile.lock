@@ -1,15 +1,21 @@
 PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - Masonry
   - MBProgressHUD
+  - PNChart (~> 0.8.9)
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 728d9362eeff9f75105cbefce63aa67fa36a75f6
+PODFILE CHECKSUM: b0a04fd6e92dc77213456c5700f57ce4370c13a0
 
 COCOAPODS: 1.4.0

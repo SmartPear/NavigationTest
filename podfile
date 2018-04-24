@@ -4,4 +4,5 @@ inhibit_all_warnings!
 target 'NavigationTest' do
 pod 'MBProgressHUD'
 pod 'Masonry'
+pod 'PNChart', '~> 0.8.9'
 end

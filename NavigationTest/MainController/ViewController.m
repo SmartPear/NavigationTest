@@ -16,6 +16,7 @@
 #import "CornerTextViewController.h"
 #import "NSPredicateController.h"
 #import "UIViewController+SlidMenu.h"
+#import "PNChartViewController.h"
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * tableview;
@@ -92,6 +93,9 @@
     }else if (indexPath.row == 6){
         NSPredicateController * control = [[NSPredicateController alloc]init];
         [self.navigationController pushViewController:control animated:true];
+    }else if (indexPath.row == 7){
+        PNChartViewController * chart = [[PNChartViewController alloc]init];
+        [self.navigationController pushViewController:chart animated:true];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -99,7 +103,7 @@
 
 -(NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词", nil];
+        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图", nil];
     }return _dataArr;
 }
 
