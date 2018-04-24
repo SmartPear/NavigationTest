@@ -19,32 +19,30 @@ static CGFloat MaxCoverAlpha = 0.3;
 static CGFloat MinActionSpeed = 500;
 #define userWidth [UIScreen mainScreen].bounds.size.width * MenuWidthScale
 @interface MainViewController ()<UIGestureRecognizerDelegate>
-@property (nonatomic,strong)UINavigationController * Nav;
-@property (nonatomic,strong)UserViewController     * user;
-@property (nonatomic,strong)ViewController         * mainControl;
+
 @property (nonatomic,assign)CGPoint  originalPoint;
 @property (nonatomic, strong) UIView *coverView;
+//遮罩view
+//拖拽手势
+@property (nonatomic, strong) UIPanGestureRecognizer *pan;
 @end
 
 @implementation MainViewController
-
+-(instancetype)initWithRootViewController:(UIViewController *)rootViewController{
+    if (self = [super init]) {
+        _rootViewController = rootViewController;
+        [self addChildViewController:_rootViewController];
+        [self.view addSubview:_rootViewController.view];
+        [_rootViewController didMoveToParentViewController:self];
+    }return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.originalPoint = CGPointZero;
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.Nav.view];
-    [self.view addSubview:self.user.view];
-    self.Nav.view.frame = self.view.bounds;
-    self.user.view.frame  = CGRectMake(-userWidth, 0, userWidth, self.view.bounds.size.height);
-    [self addGesture];
+    self.originalPoint = CGPointZero;
+    [self.view addGestureRecognizer:self.pan];
+    [_rootViewController.view addSubview:self.coverView];
     
-    _coverView = [[UIView alloc] initWithFrame:self.view.bounds];
-    _coverView.backgroundColor = [UIColor blackColor];
-    _coverView.alpha = 0;
-    _coverView.hidden = true;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
-    [_coverView addGestureRecognizer:tap];
-    [_Nav.view addSubview:_coverView];
     
 }
 - (void)tap {
@@ -52,25 +50,61 @@ static CGFloat MinActionSpeed = 500;
     [self showRootViewControllerAnimated:true];
 }
 
--(void)addGesture{
-    UIPanGestureRecognizer * ges = [[UIPanGestureRecognizer alloc]init];
-    [ges addTarget:self action:@selector(panGestureRecognizerAction:)];
-    [self.view addGestureRecognizer:ges];
-    ges.delegate = self;
+-(void)setLeftViewController:(UIViewController *)leftViewController{
+    _leftViewController = leftViewController;
+    //提前设置ViewController的viewframe，为了懒加载view造成的frame问题，所以通过setter设置了新的view
+    _leftViewController.view.frame = CGRectMake(0, 0, [self menuWidth], self.view.bounds.size.height);
+    //自定义View需要主动调用viewDidLoad
+    [_leftViewController viewDidLoad];
+    [self addChildViewController:_leftViewController];
+    [self.view insertSubview:_leftViewController.view atIndex:0];
+    [_leftViewController didMoveToParentViewController:self];
 }
 
--(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    if (_Nav.viewControllers.count > 1) {
-        return NO;
+
+//设置拖拽响应范围、设置Navigation子视图不可拖拽
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    //设置Navigation子视图不可拖拽
+    if ([_rootViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)_rootViewController;
+        if (navigationController.viewControllers.count > 1 && navigationController.interactivePopGestureRecognizer.enabled) {
+            return NO;
+        }
+    }
+    //如果Tabbar的当前视图是UINavigationController，设置UINavigationController子视图不可拖拽
+    if ([_rootViewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabbarController = (UITabBarController*)_rootViewController;
+        UINavigationController *navigationController = tabbarController.selectedViewController;
+        if ([navigationController isKindOfClass:[UINavigationController class]]) {
+            if (navigationController.viewControllers.count > 1 && navigationController.interactivePopGestureRecognizer.enabled) {
+                return NO;
+            }
+        }
+    }
+    //设置拖拽响应范围
+    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+        //拖拽响应范围是距离边界是空白位置宽度
+        CGFloat actionWidth = [self emptyWidth];
+        CGPoint point = [touch locationInView:gestureRecognizer.view];
+        if (point.x <= actionWidth || point.x > self.view.bounds.size.width - actionWidth) {
+            return YES;
+        } else {
+            return NO;
+        }
     }
     return YES;
+}
+
+//空白宽度
+- (CGFloat)emptyWidth {
+    return self.view.bounds.size.width - self.menuWidth;
 }
 //滑动手势
 -(void)panGestureRecognizerAction:(UIPanGestureRecognizer*)pan{
     switch (pan.state) {
             //记录起始位置 方便拖拽移动
         case UIGestureRecognizerStateBegan:
-            _originalPoint = _Nav.view.center;
+            _originalPoint = _rootViewController.view.center;
             break;
         case UIGestureRecognizerStateChanged:
             [self panChanged:pan];
@@ -88,27 +122,35 @@ static CGFloat MinActionSpeed = 500;
 -(void)panChanged:(UIPanGestureRecognizer*)pan{
     //拖拽的距离
     CGPoint translation = [pan translationInView:self.view];
-
-    CGFloat X = CGRectGetMinX(_Nav.view.frame);
-    if (X<=0 && translation.x<0) {
-        return;
-    }
-    if (X >= userWidth && translation.x>0) {
-        return;
-    }
-    
     //移动主控制器
-    _Nav.view.center = CGPointMake(_originalPoint.x + translation.x, _originalPoint.y);
-    _coverView.hidden = false;
-    [_Nav.view bringSubviewToFront:_coverView];
-    
+    _rootViewController.view.center = CGPointMake(_originalPoint.x + translation.x, _originalPoint.y);
     //判断是否设置了左右菜单
-    if (X > 0) {
-        _coverView.alpha = CGRectGetMinX(_Nav.view.frame)/userWidth * MaxCoverAlpha;
-        self.user.view.frame = CGRectMake(X-userWidth, 0, userWidth, self.view.bounds.size.height);
+
+    if (!_leftViewController && CGRectGetMinX(_rootViewController.view.frame) >= 0) {
+        _rootViewController.view.frame = self.view.bounds;
     }
-    
+    //滑动到边缘位置后不可以继续滑动
+    if (CGRectGetMinX(_rootViewController.view.frame) > self.menuWidth) {
+        _rootViewController.view.center = CGPointMake(_rootViewController.view.bounds.size.width/2 + self.menuWidth, _rootViewController.view.center.y);
+    }
+ 
+    //判断显示左菜单还是右菜单
+    if (CGRectGetMinX(_rootViewController.view.frame) > 0) {
+
+        //更新左菜单位置
+        [self updateLeftMenuFrame];
+        //更新遮罩层的透明度
+        _coverView.hidden = false;
+        [_rootViewController.view bringSubviewToFront:_coverView];
+        _coverView.alpha = CGRectGetMinX(_rootViewController.view.frame)/self.menuWidth * MaxCoverAlpha;
+    }
+
 }
+//更新左侧菜单位置
+- (void)updateLeftMenuFrame {
+    _leftViewController.view.center = CGPointMake(CGRectGetMinX(_rootViewController.view.frame)/2, _leftViewController.view.center.y);
+}
+
 //拖拽结束
 - (void)panEnd:(UIPanGestureRecognizer*)pan {
     
@@ -119,12 +161,24 @@ static CGFloat MinActionSpeed = 500;
         return;
     }
     //正常速度
-    if (CGRectGetMinX(_Nav.view.frame) > userWidth/2) {
+    if (CGRectGetMinX(_rootViewController.view.frame) > self.menuWidth/2) {
         [self showLeftViewControllerAnimated:true];
     }else{
         [self showRootViewControllerAnimated:true];
     }
 }
+//显示左侧菜单
+- (void)showLeftViewControllerAnimated:(BOOL)animated {
+    if (!_leftViewController) {return;}
+    _coverView.hidden = false;
+    [_rootViewController.view bringSubviewToFront:_coverView];
+    [UIView animateWithDuration:[self animationDurationAnimated:animated] animations:^{
+        _rootViewController.view.center = CGPointMake(_rootViewController.view.bounds.size.width/2 + self.menuWidth, _rootViewController.view.center.y);
+        _leftViewController.view.frame = CGRectMake(0, 0, [self menuWidth], self.view.bounds.size.height);
+        _coverView.alpha = MaxCoverAlpha;
+    }];
+}
+
 //处理快速滑动
 - (void)dealWithFastSliding:(CGFloat)speedX {
     //向左滑动
@@ -138,22 +192,19 @@ static CGFloat MinActionSpeed = 500;
     }
     return;
 }
-//显示左侧菜单
-- (void)showLeftViewControllerAnimated:(BOOL)animated {
-    
-
-    [UIView animateWithDuration:0.25 animations:^{
-        _Nav.view.frame = CGRectMake(userWidth, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-        _user.view.frame = CGRectMake(0, 0, userWidth, self.view.bounds.size.height);
-    }];
+//菜单宽度
+- (CGFloat)menuWidth {
+    return MenuWidthScale * self.view.bounds.size.width;
 }
+
+
 //显示主视图
 -(void)showRootViewControllerAnimated:(BOOL)animated{
     
     [UIView animateWithDuration:0.25 animations:^{
-        CGRect frame = _Nav.view.frame;
+        CGRect frame = _rootViewController.view.frame;
         frame.origin.x = 0;
-        _Nav.view.frame = frame;
+        _rootViewController.view.frame = frame;
         [self updateLeftMenuFrame];
         _coverView.alpha = 0;
 
@@ -163,42 +214,32 @@ static CGFloat MinActionSpeed = 500;
     }];
 }
 
-//更新左侧菜单位置
-- (void)updateLeftMenuFrame {
-    
-    _user.view.frame = CGRectMake(-userWidth, 0, userWidth, self.view.bounds.size.height);
+
+//动画时长
+- (CGFloat)animationDurationAnimated:(BOOL)animated {
+    return animated ? 0.25 : 0;
 }
 
--(UINavigationController *)Nav{
-    if (!_Nav) {
-        _Nav = [[UINavigationController alloc]initWithRootViewController:self.mainControl];
-        [self addChildViewController:_Nav];
-    }return _Nav;
+-(UIPanGestureRecognizer *)pan{
+    if (!_pan) {
+        _pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGestureRecognizerAction:)];
+        _pan.delegate = self;
+    }return _pan;
 }
--(ViewController *)mainControl{
-    if (!_mainControl) {
-        _mainControl = [[ViewController alloc]init];
-    }return _mainControl;
+-(UIView *)coverView{
+    if (!_coverView) {
+        _coverView = [[UIView alloc] initWithFrame:self.view.bounds];
+        _coverView.backgroundColor = [UIColor blackColor];
+        _coverView.alpha = 0;
+        _coverView.hidden = true;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+        [_coverView addGestureRecognizer:tap];
+    }return _coverView;
 }
--(UserViewController *)user{
-    if (!_user) {
-        _user = [[UserViewController alloc]init];
-        [self addChildViewController:_user];
-    }return _user;
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

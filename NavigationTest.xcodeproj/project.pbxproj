@@ -75,6 +75,7 @@
 		03DBF23620849F0000975EAA /* NSPredicateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DBF23520849F0000975EAA /* NSPredicateController.m */; };
 		03DD19D0208EBEC5003D5D61 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19CF208EBEC5003D5D61 /* MainViewController.m */; };
 		03DD19D3208EC00E003D5D61 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19D2208EC00E003D5D61 /* UserViewController.m */; };
+		03DD19D6208F0E04003D5D61 /* UIViewController+SlidMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */; };
 		03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */; };
 		03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA3392204CE0510060FC7F /* TextKitUViewController.m */; };
 		B296A008A30CABE18B6DBAD8 /* libPods-NavigationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5646510E1D18309CE6FF714 /* libPods-NavigationTest.a */; };
@@ -190,6 +191,8 @@
 		03DD19CF208EBEC5003D5D61 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		03DD19D1208EC00E003D5D61 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		03DD19D2208EC00E003D5D61 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		03DD19D4208F0E04003D5D61 /* UIViewController+SlidMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SlidMenu.h"; sourceTree = "<group>"; };
+		03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SlidMenu.m"; sourceTree = "<group>"; };
 		03E64A00205F58270041AFCE /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		03EA3391204CE0510060FC7F /* TextKitUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextKitUViewController.h; sourceTree = "<group>"; };
@@ -435,6 +438,8 @@
 				03A50603202AE66E00BBEAFD /* ViewController.m */,
 				03DD19CE208EBEC5003D5D61 /* MainViewController.h */,
 				03DD19CF208EBEC5003D5D61 /* MainViewController.m */,
+				03DD19D4208F0E04003D5D61 /* UIViewController+SlidMenu.h */,
+				03DD19D5208F0E04003D5D61 /* UIViewController+SlidMenu.m */,
 				03DD19D1208EC00E003D5D61 /* UserViewController.h */,
 				03DD19D2208EC00E003D5D61 /* UserViewController.m */,
 			);
@@ -712,6 +717,7 @@
 				03161D97207C958F003ED51E /* MyTextView.m in Sources */,
 				03578BA32043A64F0009D91C /* CoreFoundationViewController.m in Sources */,
 				0312C6FC205A1CD6002323DD /* GCDViewController.m in Sources */,
+				03DD19D6208F0E04003D5D61 /* UIViewController+SlidMenu.m in Sources */,
 				037232942064A98C0000BD39 /* CornerTextViewController.m in Sources */,
 				03CFC7B52046A1730096810F /* FlowLayout.m in Sources */,
 				03A50601202AE66E00BBEAFD /* AppDelegate.m in Sources */,

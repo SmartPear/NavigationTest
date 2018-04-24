@@ -15,10 +15,12 @@
 #import "GCDViewController.h"
 #import "CornerTextViewController.h"
 #import "NSPredicateController.h"
+#import "UIViewController+SlidMenu.h"
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * tableview;
 @property (nonatomic,strong) NSArray  * dataArr;
+@property (nonatomic,strong) UIButton * avterBtn;
 
 @end
 
@@ -26,42 +28,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.view addSubview:self.tableview];
     self.navigationItem.title = @"自主学习";
+    UIView * view = [[UIView alloc]initWithFrame:self.avterBtn.frame];
+    [view addSubview:self.avterBtn];
+    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithCustomView:view];
+    self.navigationItem.leftBarButtonItem  = left;
     self.tableview.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    NSLog(@"%@",[self transformToPinyinTone:@"戏"]);
-}
-- (NSString *)transformToPinyinTone:(NSString*)str
-{
-    // 空值判断
-    if (str == nil && str.length == 0 && str == NULL) {
-        return @"";
-    }
-    // 将字符串转为NSMutableString类型
-    NSMutableString *string = [str mutableCopy];
-    // 将字符串转换为拼音音调格式
-    CFStringTransform((__bridge CFMutableStringRef)string, NULL, kCFStringTransformMandarinLatin, NO);
-    // 返回带声调拼音字符串
-    return string;
-}
-
-
--(void)viewWillAppear:(BOOL)animated{
     
-    NSLog(@"%s",__FUNCTION__);
 }
 
-//-(void)viewDidAppear:(BOOL)animated{
-//    NSLog(@"%s",__FUNCTION__);
-//}
+-(void)headTapAction:(UIButton*)btn{
+    
+    [self.sldeMenu showLeftViewControllerAnimated:true];
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
 }
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
@@ -77,7 +63,6 @@
     NSMutableString *pinyin = [chinese mutableCopy];
     CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripCombiningMarks, NO);
-    NSLog(@"%@", pinyin);
     return [pinyin uppercaseString];
 }
 
@@ -116,6 +101,17 @@
     if (!_dataArr) {
         _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词", nil];
     }return _dataArr;
+}
+
+-(UIButton *)avterBtn{
+    if (!_avterBtn) {
+        _avterBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        _avterBtn.frame = CGRectMake(0, 0, 34, 34);
+        _avterBtn.layer.masksToBounds = true;
+        _avterBtn.layer.cornerRadius = 17;
+        [_avterBtn setImage:[UIImage imageNamed:@"ChatHead"] forState:(UIControlStateNormal)];
+        [_avterBtn addTarget:self action:@selector(headTapAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    }return _avterBtn;
 }
 
 -(UITableView *)tableview {

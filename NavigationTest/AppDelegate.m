@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "UserViewController.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,9 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor purpleColor];
-    MainViewController * main = [[MainViewController alloc]init];
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
+    MainViewController * main = [[MainViewController alloc]initWithRootViewController:nav];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = main;
+    UserViewController * userControl = [[UserViewController alloc]init];
+    main.leftViewController = userControl;
     // Override point for customization after application launch.
     return YES;
 }

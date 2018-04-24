@@ -25,6 +25,7 @@
     NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
     self.tableView.frame = self.view.bounds;
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
