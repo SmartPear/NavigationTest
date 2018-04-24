@@ -14,6 +14,7 @@
 #import <objc/runtime.h>
 #import "GCDViewController.h"
 #import "CornerTextViewController.h"
+#import "NSPredicateController.h"
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * tableview;
@@ -103,6 +104,9 @@
     }else if (indexPath.row == 5){
         CornerTextViewController* cornerText = [[CornerTextViewController alloc]init];
         [self.navigationController pushViewController:cornerText animated:YES];
+    }else if (indexPath.row == 6){
+        NSPredicateController * control = [[NSPredicateController alloc]init];
+        [self.navigationController pushViewController:control animated:true];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -110,9 +114,10 @@
 
 -(NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字", nil];
+        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词", nil];
     }return _dataArr;
 }
+
 -(UITableView *)tableview {
     
     if(!_tableview) {

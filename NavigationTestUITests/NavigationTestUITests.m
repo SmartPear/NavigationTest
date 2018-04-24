@@ -38,7 +38,7 @@
     XCUIElement *testStaticText = [[tablesQuery childrenMatchingType:XCUIElementTypeCell] elementBoundByIndex:16].staticTexts[@"test"];
     [testStaticText tap];
     [testStaticText swipeUp];
-        [[[tablesQuery childrenMatchingType:XCUIElementTypeCell] elementBoundByIndex:19].staticTexts[@"test"] tap];
+    [[[tablesQuery childrenMatchingType:XCUIElementTypeCell] elementBoundByIndex:19].staticTexts[@"test"] tap];
     
 }
 - (void)tearDown {

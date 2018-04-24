@@ -63,7 +63,6 @@
 		037232972064BDED0000BD39 /* CornerTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 037232962064BDED0000BD39 /* CornerTextView.m */; };
 		03A50601202AE66E00BBEAFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50600202AE66E00BBEAFD /* AppDelegate.m */; };
 		03A50604202AE66E00BBEAFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50603202AE66E00BBEAFD /* ViewController.m */; };
-		03A50607202AE66E00BBEAFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A50605202AE66E00BBEAFD /* Main.storyboard */; };
 		03A50609202AE66E00BBEAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A50608202AE66E00BBEAFD /* Assets.xcassets */; };
 		03A5060C202AE66E00BBEAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A5060A202AE66E00BBEAFD /* LaunchScreen.storyboard */; };
 		03A5060F202AE66E00BBEAFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A5060E202AE66E00BBEAFD /* main.m */; };
@@ -73,6 +72,9 @@
 		03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B02046462B0096810F /* CollectionViewController.m */; };
 		03CFC7B52046A1730096810F /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B42046A1730096810F /* FlowLayout.m */; };
 		03CFC7BA2046AD2C0096810F /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B92046AD2C0096810F /* CustomCollectionViewCell.m */; };
+		03DBF23620849F0000975EAA /* NSPredicateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DBF23520849F0000975EAA /* NSPredicateController.m */; };
+		03DD19D0208EBEC5003D5D61 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19CF208EBEC5003D5D61 /* MainViewController.m */; };
+		03DD19D3208EC00E003D5D61 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19D2208EC00E003D5D61 /* UserViewController.m */; };
 		03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */; };
 		03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA3392204CE0510060FC7F /* TextKitUViewController.m */; };
 		B296A008A30CABE18B6DBAD8 /* libPods-NavigationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5646510E1D18309CE6FF714 /* libPods-NavigationTest.a */; };
@@ -164,7 +166,6 @@
 		03A50600202AE66E00BBEAFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03A50602202AE66E00BBEAFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		03A50603202AE66E00BBEAFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		03A50606202AE66E00BBEAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03A50608202AE66E00BBEAFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A5060B202AE66E00BBEAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A5060D202AE66E00BBEAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,6 +184,12 @@
 		03CFC7B42046A1730096810F /* FlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
 		03CFC7B82046AD2C0096810F /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		03CFC7B92046AD2C0096810F /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		03DBF23420849F0000975EAA /* NSPredicateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPredicateController.h; sourceTree = "<group>"; };
+		03DBF23520849F0000975EAA /* NSPredicateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSPredicateController.m; sourceTree = "<group>"; };
+		03DD19CE208EBEC5003D5D61 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		03DD19CF208EBEC5003D5D61 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		03DD19D1208EC00E003D5D61 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		03DD19D2208EC00E003D5D61 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		03E64A00205F58270041AFCE /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		03EA3391204CE0510060FC7F /* TextKitUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextKitUViewController.h; sourceTree = "<group>"; };
@@ -360,16 +367,15 @@
 			children = (
 				03A505FF202AE66E00BBEAFD /* AppDelegate.h */,
 				03A50600202AE66E00BBEAFD /* AppDelegate.m */,
-				03A50602202AE66E00BBEAFD /* ViewController.h */,
-				03A50603202AE66E00BBEAFD /* ViewController.m */,
 				03578BA12043A64F0009D91C /* CoreFoundationViewController.h */,
 				03578BA22043A64F0009D91C /* CoreFoundationViewController.m */,
+				03DD19CD208EBEA7003D5D61 /* MainController */,
+				03DBF23320849EE300975EAA /* NSPredicate */,
 				031EA5E62075EA760042E7A9 /* TideLayer */,
 				037232912064A9630000BD39 /* ShowCornerText */,
 				03EA3390204CE03C0060FC7F /* TextKit */,
 				03CFC7B22046A13F0096810F /* CollectionCustom */,
 				03578BA62043DC4D0009D91C /* Category */,
-				03A50605202AE66E00BBEAFD /* Main.storyboard */,
 				0339DD0D204928DC000C7979 /* RealmTest */,
 				03A50608202AE66E00BBEAFD /* Assets.xcassets */,
 				03A5060A202AE66E00BBEAFD /* LaunchScreen.storyboard */,
@@ -411,6 +417,28 @@
 				03CFC7B92046AD2C0096810F /* CustomCollectionViewCell.m */,
 			);
 			path = CollectionCustom;
+			sourceTree = "<group>";
+		};
+		03DBF23320849EE300975EAA /* NSPredicate */ = {
+			isa = PBXGroup;
+			children = (
+				03DBF23420849F0000975EAA /* NSPredicateController.h */,
+				03DBF23520849F0000975EAA /* NSPredicateController.m */,
+			);
+			path = NSPredicate;
+			sourceTree = "<group>";
+		};
+		03DD19CD208EBEA7003D5D61 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				03A50602202AE66E00BBEAFD /* ViewController.h */,
+				03A50603202AE66E00BBEAFD /* ViewController.m */,
+				03DD19CE208EBEC5003D5D61 /* MainViewController.h */,
+				03DD19CF208EBEC5003D5D61 /* MainViewController.m */,
+				03DD19D1208EC00E003D5D61 /* UserViewController.h */,
+				03DD19D2208EC00E003D5D61 /* UserViewController.m */,
+			);
+			path = MainController;
 			sourceTree = "<group>";
 		};
 		03EA3390204CE03C0060FC7F /* TextKit */ = {
@@ -571,7 +599,6 @@
 				0312C721205A5AE2002323DD /* 西狭颂022.jpg in Resources */,
 				0312C748205A65E5002323DD /* 西狭颂013.jpg in Resources */,
 				0312C74E205A65E5002323DD /* 西狭颂009.jpg in Resources */,
-				03A50607202AE66E00BBEAFD /* Main.storyboard in Resources */,
 				0312C74C205A65E5002323DD /* 西狭颂010.jpg in Resources */,
 				0312C725205A5AE2002323DD /* 西狭颂037.jpg in Resources */,
 				0312C75C205A7096002323DD /* 西狭颂040.jpg in Resources */,
@@ -670,9 +697,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DD19D3208EC00E003D5D61 /* UserViewController.m in Sources */,
 				03A50636202AEA3E00BBEAFD /* UIViewController+Caterory.m in Sources */,
 				03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */,
 				03A50604202AE66E00BBEAFD /* ViewController.m in Sources */,
+				03DD19D0208EBEC5003D5D61 /* MainViewController.m in Sources */,
+				03DBF23620849F0000975EAA /* NSPredicateController.m in Sources */,
 				03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */,
 				037232972064BDED0000BD39 /* CornerTextView.m in Sources */,
 				0339DD13204929C0000C7979 /* Person.m in Sources */,
@@ -723,14 +753,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03A50605202AE66E00BBEAFD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03A50606202AE66E00BBEAFD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		03A5060A202AE66E00BBEAFD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
