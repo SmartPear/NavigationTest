@@ -69,6 +69,9 @@
 		03A50619202AE66E00BBEAFD /* NavigationTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50618202AE66E00BBEAFD /* NavigationTestTests.m */; };
 		03A50624202AE66E00BBEAFD /* NavigationTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50623202AE66E00BBEAFD /* NavigationTestUITests.m */; };
 		03A50636202AEA3E00BBEAFD /* UIViewController+Caterory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50635202AEA3E00BBEAFD /* UIViewController+Caterory.m */; };
+		03B191D32090904500EF12EB /* QQChatList.png in Resources */ = {isa = PBXBuildFile; fileRef = 03B191D22090904500EF12EB /* QQChatList.png */; };
+		03B191D72090908B00EF12EB /* ExmapleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B191D62090908B00EF12EB /* ExmapleViewController.m */; };
+		03B191DA2090920400EF12EB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B191D92090920400EF12EB /* BaseViewController.m */; };
 		03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B02046462B0096810F /* CollectionViewController.m */; };
 		03CFC7B52046A1730096810F /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B42046A1730096810F /* FlowLayout.m */; };
 		03CFC7BA2046AD2C0096810F /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B92046AD2C0096810F /* CustomCollectionViewCell.m */; };
@@ -180,6 +183,11 @@
 		03A50625202AE66E00BBEAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A50634202AEA3E00BBEAFD /* UIViewController+Caterory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Caterory.h"; sourceTree = "<group>"; };
 		03A50635202AEA3E00BBEAFD /* UIViewController+Caterory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Caterory.m"; sourceTree = "<group>"; };
+		03B191D22090904500EF12EB /* QQChatList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QQChatList.png; sourceTree = "<group>"; };
+		03B191D52090908B00EF12EB /* ExmapleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExmapleViewController.h; sourceTree = "<group>"; };
+		03B191D62090908B00EF12EB /* ExmapleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExmapleViewController.m; sourceTree = "<group>"; };
+		03B191D82090920400EF12EB /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		03B191D92090920400EF12EB /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		03CFC7AF2046462B0096810F /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		03CFC7B02046462B0096810F /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		03CFC7B32046A1730096810F /* FlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
@@ -378,6 +386,9 @@
 				03A50600202AE66E00BBEAFD /* AppDelegate.m */,
 				03578BA12043A64F0009D91C /* CoreFoundationViewController.h */,
 				03578BA22043A64F0009D91C /* CoreFoundationViewController.m */,
+				03B191D82090920400EF12EB /* BaseViewController.h */,
+				03B191D92090920400EF12EB /* BaseViewController.m */,
+				03B191D42090907000EF12EB /* ExmpleController */,
 				03DD19D8208F223C003D5D61 /* PNChart */,
 				03DD19CD208EBEA7003D5D61 /* MainController */,
 				03DBF23320849EE300975EAA /* NSPredicate */,
@@ -415,6 +426,15 @@
 				03A50625202AE66E00BBEAFD /* Info.plist */,
 			);
 			path = NavigationTestUITests;
+			sourceTree = "<group>";
+		};
+		03B191D42090907000EF12EB /* ExmpleController */ = {
+			isa = PBXGroup;
+			children = (
+				03B191D52090908B00EF12EB /* ExmapleViewController.h */,
+				03B191D62090908B00EF12EB /* ExmapleViewController.m */,
+			);
+			path = ExmpleController;
 			sourceTree = "<group>";
 		};
 		03CFC7B22046A13F0096810F /* CollectionCustom */ = {
@@ -455,6 +475,7 @@
 		03DD19D8208F223C003D5D61 /* PNChart */ = {
 			isa = PBXGroup;
 			children = (
+				03B191D22090904500EF12EB /* QQChatList.png */,
 				03DD19D9208F2250003D5D61 /* PNChartViewController.h */,
 				03DD19DA208F2250003D5D61 /* PNChartViewController.m */,
 			);
@@ -640,6 +661,7 @@
 				0312C747205A65E5002323DD /* 西狭颂002.jpg in Resources */,
 				0312C75E205A709A002323DD /* 西狭颂039.jpg in Resources */,
 				0312C72D205A5AE2002323DD /* 西狭颂036.jpg in Resources */,
+				03B191D32090904500EF12EB /* QQChatList.png in Resources */,
 				0312C753205A65E5002323DD /* 西狭颂007.jpg in Resources */,
 				0312C72F205A5AE2002323DD /* 西狭颂021.jpg in Resources */,
 			);
@@ -728,8 +750,10 @@
 				03DD19DB208F2250003D5D61 /* PNChartViewController.m in Sources */,
 				0339DD13204929C0000C7979 /* Person.m in Sources */,
 				03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */,
+				03B191DA2090920400EF12EB /* BaseViewController.m in Sources */,
 				03A5060F202AE66E00BBEAFD /* main.m in Sources */,
 				031EA5E92075EAC50042E7A9 /* TideLayerViewController.m in Sources */,
+				03B191D72090908B00EF12EB /* ExmapleViewController.m in Sources */,
 				03161D97207C958F003ED51E /* MyTextView.m in Sources */,
 				03578BA32043A64F0009D91C /* CoreFoundationViewController.m in Sources */,
 				0312C6FC205A1CD6002323DD /* GCDViewController.m in Sources */,

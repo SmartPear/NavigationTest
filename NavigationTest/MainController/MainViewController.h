@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : BaseViewController
 //主视图
 @property (nonatomic, strong) UIViewController *rootViewController;
 //左侧视图
@@ -20,4 +20,5 @@
 
 //显示左侧菜单
 -(void)showLeftViewControllerAnimated:(BOOL)animated;
+-(void)showRootViewControllerAnimated:(BOOL)animated;
 @end

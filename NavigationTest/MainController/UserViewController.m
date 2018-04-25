@@ -7,7 +7,9 @@
 //
 
 #import "UserViewController.h"
-
+#import "MainViewController.h"
+#import "UIViewController+SlidMenu.h"
+#import "ExmapleViewController.h"
 @interface UserViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView * tableView;
 @end
@@ -34,6 +36,15 @@
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    ExmapleViewController * user = [[ExmapleViewController alloc]init];
+    if (self.sldeMenu) {
+        [(UINavigationController*)self.sldeMenu.rootViewController pushViewController:user animated:YES];
+        [self.sldeMenu showRootViewControllerAnimated:NO];
+    }
 }
 
 -(UITableView *)tableView{

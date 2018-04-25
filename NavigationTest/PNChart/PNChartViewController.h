@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PNChartViewController : UIViewController
+@interface PNChartViewController : BaseViewController
 
 @end
