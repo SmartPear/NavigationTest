@@ -19,4 +19,5 @@
 #import <Spring/Spring-umbrella.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
+#import "UIViewController+Caterory.h"
 #endif /* PrefixHeader_pch */

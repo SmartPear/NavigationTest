@@ -17,9 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
+//    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.imgView];
+    [self wr_setNavBarBarTintColor:[UIColor redColor]];
     // Do any additional setup after loading the view.
 }
 //-(void)viewDidAppear:(BOOL)animated{
@@ -47,7 +48,7 @@
 -(UIImageView *)imgView{
     if (!_imgView) {
         _imgView = [[UIImageView alloc]init];
-        _imgView.backgroundColor = [UIColor redColor];
+        _imgView.backgroundColor = [UIColor whiteColor];
         _imgView.frame = self.view.bounds;
     }return _imgView;
 }

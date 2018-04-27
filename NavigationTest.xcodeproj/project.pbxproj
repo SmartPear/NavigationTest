@@ -479,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				03A50602202AE66E00BBEAFD /* ViewController.h */,
+				03B191D22090904500EF12EB /* QQChatList.png */,
 				03A50603202AE66E00BBEAFD /* ViewController.m */,
 				03DD19CE208EBEC5003D5D61 /* MainViewController.h */,
 				03DD19CF208EBEC5003D5D61 /* MainViewController.m */,
@@ -491,7 +492,6 @@
 		03DD19D8208F223C003D5D61 /* PNChart */ = {
 			isa = PBXGroup;
 			children = (
-				03B191D22090904500EF12EB /* QQChatList.png */,
 				03DD19D9208F2250003D5D61 /* PNChartViewController.h */,
 				03DD19DA208F2250003D5D61 /* PNChartViewController.m */,
 			);
