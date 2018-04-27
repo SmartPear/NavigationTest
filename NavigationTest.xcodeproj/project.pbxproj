@@ -82,7 +82,7 @@
 		03DD19DB208F2250003D5D61 /* PNChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19DA208F2250003D5D61 /* PNChartViewController.m */; };
 		03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */; };
 		03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA3392204CE0510060FC7F /* TextKitUViewController.m */; };
-		B296A008A30CABE18B6DBAD8 /* libPods-NavigationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5646510E1D18309CE6FF714 /* libPods-NavigationTest.a */; };
+		2B0088599F9843C46449534F /* Pods_NavigationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E96C37E70A689A03EC52B2 /* Pods_NavigationTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,7 +211,7 @@
 		03EA3392204CE0510060FC7F /* TextKitUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextKitUViewController.m; sourceTree = "<group>"; };
 		22C499E2252E0BCC3266A31A /* Pods-NavigationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest.release.xcconfig"; sourceTree = "<group>"; };
 		338305CC1E3114EA25E46EF5 /* Pods-NavigationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest.debug.xcconfig"; sourceTree = "<group>"; };
-		B5646510E1D18309CE6FF714 /* libPods-NavigationTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E96C37E70A689A03EC52B2 /* Pods_NavigationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0339DD10204929A2000C7979 /* Realm.framework in Frameworks */,
-				B296A008A30CABE18B6DBAD8 /* libPods-NavigationTest.a in Frameworks */,
+				2B0088599F9843C46449534F /* Pods_NavigationTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,12 +382,7 @@
 		03A505FE202AE66E00BBEAFD /* NavigationTest */ = {
 			isa = PBXGroup;
 			children = (
-				03A505FF202AE66E00BBEAFD /* AppDelegate.h */,
-				03A50600202AE66E00BBEAFD /* AppDelegate.m */,
-				03578BA12043A64F0009D91C /* CoreFoundationViewController.h */,
-				03578BA22043A64F0009D91C /* CoreFoundationViewController.m */,
-				03B191D82090920400EF12EB /* BaseViewController.h */,
-				03B191D92090920400EF12EB /* BaseViewController.m */,
+				03B191DC2090AF5D00EF12EB /* BaseClass */,
 				03B191D42090907000EF12EB /* ExmpleController */,
 				03DD19D8208F223C003D5D61 /* PNChart */,
 				03DD19CD208EBEA7003D5D61 /* MainController */,
@@ -399,10 +394,7 @@
 				03578BA62043DC4D0009D91C /* Category */,
 				0339DD0D204928DC000C7979 /* RealmTest */,
 				03A50608202AE66E00BBEAFD /* Assets.xcassets */,
-				03DD19D7208F21D9003D5D61 /* PrefixHeader.pch */,
-				03A5060A202AE66E00BBEAFD /* LaunchScreen.storyboard */,
-				03A5060D202AE66E00BBEAFD /* Info.plist */,
-				03A5060E202AE66E00BBEAFD /* main.m */,
+				03B191DB2090AF4600EF12EB /* SupportFile */,
 				0312C6FD205A4116002323DD /* Resource */,
 				0312C6F9205A1CBE002323DD /* GCD */,
 				0339DD0E2049296A000C7979 /* FrameWork */,
@@ -435,6 +427,30 @@
 				03B191D62090908B00EF12EB /* ExmapleViewController.m */,
 			);
 			path = ExmpleController;
+			sourceTree = "<group>";
+		};
+		03B191DB2090AF4600EF12EB /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				03DD19D7208F21D9003D5D61 /* PrefixHeader.pch */,
+				03A5060A202AE66E00BBEAFD /* LaunchScreen.storyboard */,
+				03A5060D202AE66E00BBEAFD /* Info.plist */,
+				03A5060E202AE66E00BBEAFD /* main.m */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		03B191DC2090AF5D00EF12EB /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				03A505FF202AE66E00BBEAFD /* AppDelegate.h */,
+				03A50600202AE66E00BBEAFD /* AppDelegate.m */,
+				03578BA12043A64F0009D91C /* CoreFoundationViewController.h */,
+				03578BA22043A64F0009D91C /* CoreFoundationViewController.m */,
+				03B191D82090920400EF12EB /* BaseViewController.h */,
+				03B191D92090920400EF12EB /* BaseViewController.m */,
+			);
+			path = BaseClass;
 			sourceTree = "<group>";
 		};
 		03CFC7B22046A13F0096810F /* CollectionCustom */ = {
@@ -503,7 +519,7 @@
 		F90CD6376942F249996F4BFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5646510E1D18309CE6FF714 /* libPods-NavigationTest.a */,
+				77E96C37E70A689A03EC52B2 /* Pods_NavigationTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -708,9 +724,36 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AsyncDisplayKit/AsyncDisplayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -841,13 +884,15 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = "$(inherited)";
+				GCC_PREFIX_HEADER = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -901,6 +946,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = "$(inherited)";
+				GCC_PREFIX_HEADER = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -918,6 +965,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 338305CC1E3114EA25E46EF5 /* Pods-NavigationTest.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP889REF75;
@@ -926,13 +974,15 @@
 					"$(PROJECT_DIR)/NavigationTest/FrameWork",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/wangxin/Desktop/第三方/NavigationTest/NavigationTest/PrefixHeader.pch";
-				INFOPLIST_FILE = NavigationTest/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = "$(inherited)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NavigationTest/SupportFile/PrefixHeader.pch";
+				INFOPLIST_FILE = NavigationTest/SupportFile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.NavigationTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -940,6 +990,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22C499E2252E0BCC3266A31A /* Pods-NavigationTest.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP889REF75;
@@ -948,13 +999,15 @@
 					"$(PROJECT_DIR)/NavigationTest/FrameWork",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/wangxin/Desktop/第三方/NavigationTest/NavigationTest/PrefixHeader.pch";
-				INFOPLIST_FILE = NavigationTest/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = "$(inherited)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NavigationTest/SupportFile/PrefixHeader.pch";
+				INFOPLIST_FILE = NavigationTest/SupportFile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.NavigationTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Release;
 		};
