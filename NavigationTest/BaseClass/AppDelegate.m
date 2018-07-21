@@ -10,7 +10,7 @@
 #import "MainViewController.h"
 #import "UserViewController.h"
 #import "ViewController.h"
-
+#import "BaseNavigationViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor purpleColor];
-    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
+    BaseNavigationViewController * nav = [[BaseNavigationViewController alloc]initWithRootViewController:[ViewController new]];
     MainViewController * main = [[MainViewController alloc]initWithRootViewController:nav];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = main;

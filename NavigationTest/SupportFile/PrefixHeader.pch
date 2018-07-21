@@ -14,10 +14,8 @@
 #import <Realm/Realm.h>
 #import <MJRefresh/MJRefresh.h>
 #import <Spring/Spring-Swift.h>
-#import <ReactiveSwift/ReactiveSwift-Swift.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Spring/Spring-umbrella.h>
 #import <MBProgressHUD/MBProgressHUD.h>
-#import <AsyncDisplayKit/AsyncDisplayKit.h>
 #import "UIViewController+Caterory.h"
+
 #endif /* PrefixHeader_pch */

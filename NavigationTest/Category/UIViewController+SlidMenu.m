@@ -31,5 +31,20 @@
     }
     return nil;
 }
-
+//push转场动画
+- (void)wx_pushViewControler:(UIViewController *)viewController withAnimation:(WXTransitionManager*)transitionManager{
+    if (!viewController) {
+        return;
+    }
+    if (!transitionManager) {
+        return;
+    }
+    
+    if (self.navigationController) {
+        self.navigationController.delegate  = transitionManager;
+        viewController.transitioningDelegate = transitionManager;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+}
 @end

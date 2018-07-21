@@ -40,8 +40,8 @@
     
     CGFloat x = cos(DEGREES_TO_RADIANS(50.25));
     CGFloat y =   pow(x, 2);
-    CGFloat z = sqrt(1 - y) ;
-    CGFloat w = self.bounds.size.width/2/z;
+    CGFloat z =   sqrt(1 - y) ;
+    CGFloat w =   self.bounds.size.width/2/z;
     self.arcRadius=w;
     self.LuCenter = CGPointMake(self.center.x, w);
     UIBezierPath* outArc=[UIBezierPath bezierPathWithArcCenter:self.LuCenter radius:self.arcRadius startAngle:startAngle endAngle:endAngle clockwise:YES];

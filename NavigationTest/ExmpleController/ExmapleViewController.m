@@ -10,6 +10,7 @@
 
 @interface ExmapleViewController ()
 @property (nonatomic,strong)UIImageView * img;
+@property (nonatomic,strong)UIButton * backBtn;
 @end
 
 @implementation ExmapleViewController
@@ -21,6 +22,9 @@
     [self.img mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    self.backBtn = [[UIButton alloc]init];
+    [self.backBtn setTitle:@"" forState:(UIControlStateNormal)];
+    
     // Do any additional setup after loading the view.
 }
 -(UIImageView *)img{

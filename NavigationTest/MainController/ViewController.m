@@ -17,11 +17,18 @@
 #import "NSPredicateController.h"
 #import "UIViewController+SlidMenu.h"
 #import "PNChartViewController.h"
+#import "WebViewViewController.h"
+#import "EncryptionViewController.h"
+#import "TempleViewController.h"
+#import "RotateViewController.h"
+#import "TestViewController.h"
+#import "UIDynamicViewController.h"
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * tableview;
 @property (nonatomic,strong) NSArray  * dataArr;
 @property (nonatomic,strong) UIButton * avterBtn;
+@property (nonatomic,strong) NSArray * classNames;
 
 @end
 
@@ -35,16 +42,32 @@
     [view addSubview:self.avterBtn];
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithCustomView:view];
     self.navigationItem.leftBarButtonItem  = left;
-    self.tableview.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    [self transFormTime];
     
+}
+-(void)transFormTime{
+    NSInteger  timeInterval = 1526272225000;
+    NSDateFormatter * formate = [[NSDateFormatter alloc]init];
+    formate.timeZone = [NSTimeZone localTimeZone];
+    formate.timeStyle = NSDateFormatterMediumStyle;
+    formate.dateStyle = NSDateFormatterMediumStyle;
+    formate.dateFormat = @"YYYY-MM-dd HH:mm";
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:timeInterval/1000];
+    NSString * str = [formate stringFromDate:date];
+    self.navigationItem.title = str;
 }
 
 -(void)headTapAction:(UIButton*)btn{
     
     [self.sldeMenu showLeftViewControllerAnimated:true];
 }
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self transFormTime];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
@@ -68,45 +91,32 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString * text = self.dataArr[indexPath.row];
-    
-    if (indexPath.row == 0) {
-        CoreFoundationViewController * control = [[CoreFoundationViewController alloc]init];
-        control.navigationItem.title = text;
-        [self.navigationController pushViewController:control animated:YES];
-    }else if (indexPath.row == 1){
-        CollectionViewController * collection = [[CollectionViewController alloc]init];
-        collection.navigationItem.title =text;
-        [self.navigationController pushViewController:collection animated:YES];
-    }else if (indexPath.row == 2){
-        RealmViewController * realm = [[RealmViewController alloc]init];
-        [self.navigationController pushViewController:realm animated:YES];
-    }else if (indexPath.row == 3){
-        TextKitUViewController * text = [[TextKitUViewController alloc]init];
-        [self.navigationController pushViewController:text animated:YES];
-    }else if(indexPath.row ==4){
-        GCDViewController * gcd = [[GCDViewController alloc]init];
-        [self.navigationController pushViewController:gcd animated:YES];
-    }else if (indexPath.row == 5){
-        CornerTextViewController* cornerText = [[CornerTextViewController alloc]init];
-        [self.navigationController pushViewController:cornerText animated:YES];
-    }else if (indexPath.row == 6){
-        NSPredicateController * control = [[NSPredicateController alloc]init];
-        [self.navigationController pushViewController:control animated:true];
-    }else if (indexPath.row == 7){
-        PNChartViewController * chart = [[PNChartViewController alloc]init];
-        [self.navigationController pushViewController:chart animated:true];
+    NSString * text = self.classNames[indexPath.row];
+    NSString * name = self.dataArr[indexPath.row];
+    UIViewController * control ;
+    if ([text isEqualToString:@"UIDynamicViewController"]) {
+        control = [[NSClassFromString(text) alloc]initWithNibName:text bundle:nil];
+    }else{
+        control = [[NSClassFromString(text) alloc]init];
     }
+    control.navigationItem.title = name;
+    [self.navigationController pushViewController:control animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     
 }
 
 -(NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图", nil];
+        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图",@"webview",@"加密",@"新组件",@"旋转",@"测试",@"悬浮按钮", nil];
     }return _dataArr;
 }
-
+-(NSArray *)classNames{
+    if (!_classNames) {
+        _classNames = [[NSArray alloc]initWithObjects:@"CoreFoundationViewController",@"CollectionViewController",@"RealmViewController",@"TextKitUViewController",@"GCDViewController",@"CornerTextViewController",@"NSPredicateController",@"PNChartViewController",@"WebViewViewController",@"EncryptionViewController",@"TempleViewController",@"RotateViewController",@"TestViewController",@"UIDynamicViewController", nil];
+        
+    }return _classNames;
+}
 -(UIButton *)avterBtn{
     if (!_avterBtn) {
         _avterBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];

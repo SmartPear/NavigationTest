@@ -10,15 +10,16 @@
 
 @interface PNChartViewController ()<PNChartDelegate>
 @property (nonatomic,strong) PNBarChart * barChart;
+@property (nonatomic,strong)UIProgressView * progress;
 
 @end
 
 @implementation PNChartViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self makeLineChart];
+    [self.view addSubview:self.progress];
     // Do any additional setup after loading the view.
 }
 //设置柱状图
@@ -49,8 +50,21 @@
     [self.barChart strokeChart];
     self.barChart.delegate = self;
     
-    [self.view addSubview:self.barChart];
-  
+    [self.view addSubview:self.progress];
+    [self.progress mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(20);
+        make.center.equalTo(self.view);
+        make.height.equalTo(@30);
+    }];
+    [self.progress setProgress:0 animated:false];
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [UIView animateWithDuration:10.0 animations:^{
+        [self.progress setProgress:0.9 animated:true];
+    }];
+    
 }
 /**
  * Callback method that gets invoked when the user taps on the chart line.
@@ -82,7 +96,15 @@
 - (void)didUnselectPieItem{
     
 }
-
+-(UIProgressView *)progress{
+    if (!_progress) {
+        _progress = [[UIProgressView alloc]init];
+        _progress.trackTintColor = [UIColor redColor];
+        _progress.tintColor = [UIColor yellowColor];
+        _progress.progressTintColor = [UIColor purpleColor];
+        _progress.progressViewStyle  = UIProgressViewStyleBar;
+    }return _progress;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -45,10 +45,12 @@
             {
                 tile = [UIImage imageNamed:@"jj"];
             }
-            CGRect tileRect = CGRectMake(tileSize.width * col, tileSize.height * row,
-                                         tileSize.width, tileSize.height);
+            __block   CGRect tileRect = CGRectMake(tileSize.width * col, tileSize.height * row,
+                                                   tileSize.width, tileSize.height);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                tileRect = CGRectIntersection(self.bounds, tileRect);
+            });
             
-            tileRect = CGRectIntersection(self.bounds, tileRect);
             
             [tile drawInRect:tileRect];
             [[UIColor redColor] set];

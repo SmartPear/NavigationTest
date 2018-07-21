@@ -6,8 +6,8 @@ pod 'MBProgressHUD'
 pod 'Masonry'
 pod 'PNChart'
 pod 'Spring'
-pod 'AsyncDisplayKit'
-pod 'ReactiveCocoa'
+#pod 'AsyncDisplayKit'
+#pod 'ReactiveCocoa'
 pod 'MJRefresh'
 
 

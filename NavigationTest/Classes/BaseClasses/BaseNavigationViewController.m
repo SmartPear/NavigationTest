@@ -1,25 +1,36 @@
 //
-//  BaseViewController.m
+//  BaseNavigationViewController.m
 //  NavigationTest
 //
-//  Created by 王欣 on 2018/4/25.
+//  Created by 王欣 on 2018/6/13.
 //  Copyright © 2018年 王欣. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseNavigationViewController.h"
 
-@interface BaseViewController ()
+@interface BaseNavigationViewController ()<UINavigationControllerDelegate,UIViewControllerTransitioningDelegate>
 
 @end
 
-@implementation BaseViewController
+@implementation BaseNavigationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor whiteColor];
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationBar.translucent = false;
     // Do any additional setup after loading the view.
 }
+
+-(BOOL)shouldAutorotate{
+    return YES;
+}
+-(BOOL)prefersStatusBarHidden{
+    return NO;
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAll;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

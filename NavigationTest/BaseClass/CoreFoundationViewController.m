@@ -20,7 +20,7 @@
 //    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.imgView];
-    [self wr_setNavBarBarTintColor:[UIColor redColor]];
+//    [self wr_setNavBarBarTintColor:[UIColor redColor]];
     // Do any additional setup after loading the view.
 }
 //-(void)viewDidAppear:(BOOL)animated{
@@ -37,7 +37,7 @@
 -(void)loadImage{
     
     
-    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"屏幕快照 2018-02-26 上午10.24.31" ofType:@"png"]], NULL);
+    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"QQChatList" ofType:@"png"]], NULL);
     CGImageRef ref = CGImageSourceCreateImageAtIndex(source, 0, NULL);
     UIImage * image = [[UIImage alloc]initWithCGImage:ref];
     

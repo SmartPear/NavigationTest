@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
+#import "WXTransitionManager.h"
 @interface UIViewController (SlidMenu)
 
 @property (nonatomic, strong, readonly) MainViewController * sldeMenu;
+
+/**
+ push动画
+ 
+ @param viewController 被push viewController
+ @param transitionManager 控制类
+ */
+- (void)wx_pushViewControler:(UIViewController *)viewController withAnimation:(WXTransitionManager*)transitionManager;
 
 @end

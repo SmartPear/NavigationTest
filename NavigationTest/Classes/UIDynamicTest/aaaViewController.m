@@ -1,24 +1,22 @@
 //
-//  BaseViewController.m
+//  aaaViewController.m
 //  NavigationTest
 //
-//  Created by 王欣 on 2018/4/25.
+//  Created by 王欣 on 2018/7/20.
 //  Copyright © 2018年 王欣. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "aaaViewController.h"
 
-@interface BaseViewController ()
+@interface aaaViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation aaaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor whiteColor];
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
