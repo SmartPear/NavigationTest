@@ -32,7 +32,7 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [_subView drawScaleWithDivide:6 complete:^(NSArray *pointModels) {
+    [_subView drawScaleWithDivide:3 complete:^(NSArray *pointModels) {
         for (int i = 0; i<pointModels.count; i++) {
             CornerTextModel * model =pointModels[i];
             CGPoint  point = model.centerPoint;

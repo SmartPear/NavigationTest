@@ -8,9 +8,10 @@
 
 #import "UIDynamicViewController.h"
 #import "AttachView.h"
+#import "BezierView.h"
 @interface UIDynamicViewController ()
 @property (strong, nonatomic) AttachView * attchVie;
-
+@property (nonatomic,strong)BezierView *bezerView;
 //@Por
 @end
 
@@ -23,6 +24,11 @@
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.attchVie];
+    [self.view addSubview:self.bezerView];
+    [self.bezerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
 
 }
 
@@ -33,19 +39,15 @@
         _attchVie.backgroundColor = [UIColor purpleColor];
     }return _attchVie;
 }
+-(BezierView *)bezerView{
+    if (!_bezerView) {
+        _bezerView = [[BezierView alloc]init];
+    }return _bezerView;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

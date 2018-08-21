@@ -1,27 +1,27 @@
 PODS:
+  - FZRefresh (1.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - MJRefresh (3.1.15.3)
+  - MJExtension (3.0.13)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
-  - Spring (1.0.5)
   - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
+  - FZRefresh (~> 1.0)
   - Masonry
   - MBProgressHUD
-  - MJRefresh
+  - MJExtension (~> 3.0.13)
   - PNChart
-  - Spring
 
 SPEC CHECKSUMS:
+  FZRefresh: b823cac2e6b3cbbd9911997c00c67879c144d7ce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
-  Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: a4feebe654b927a0f05feb8d19541a43a36c3e20
+PODFILE CHECKSUM: 2ede168d14995c6ce495d67c3fe4be0574f429c7
 
 COCOAPODS: 1.4.0

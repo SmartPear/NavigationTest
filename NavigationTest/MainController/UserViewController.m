@@ -10,6 +10,8 @@
 #import "MainViewController.h"
 #import "UIViewController+SlidMenu.h"
 #import "ExmapleViewController.h"
+#import "UIScrollView+Refresh.h"
+#import "RefreshHeaderView.h"
 @interface UserViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView * tableView;
 @end
@@ -20,6 +22,20 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.tableView];
+    //    if (@available(iOS 11,*)) {
+    //        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    //    }else{
+    //        self.automaticallyAdjustsScrollViewInsets = false;
+    //    }
+    //
+    __weak typeof(self) weakSelf = self;
+    RefreshHeaderView * header = [RefreshHeaderView headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.fz_header endRefresh];
+        });
+    }];
+    self.tableView.fz_header = header;
+    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
 }
 -(void)viewDidLayoutSubviews{
@@ -30,7 +46,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+
     return cell;
 }
 
@@ -40,11 +56,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    ExmapleViewController * user = [[ExmapleViewController alloc]init];
-    if (self.sldeMenu) {
-        [(UINavigationController*)self.sldeMenu.rootViewController pushViewController:user animated:YES];
-        [self.sldeMenu showRootViewControllerAnimated:NO];
-    }
 }
 
 -(UITableView *)tableView{
@@ -53,6 +64,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.backgroundView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     }return _tableView;
 }

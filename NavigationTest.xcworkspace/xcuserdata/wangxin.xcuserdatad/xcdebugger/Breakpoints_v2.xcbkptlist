@@ -16,16 +16,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NavigationTest/WebVIEW/WebViewViewController.m"
-            timestampString = "548239585.6996731"
+            filePath = "NavigationTest/Classes/CiFilterTableViewCell.m"
+            timestampString = "555589545.834957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-webView:didFailProvisionalNavigation:withError:"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-valueChanged:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +35,39 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NavigationTest/Tool/WXTransitionManager.m"
-            timestampString = "552900429.118183"
+            filePath = "NavigationTest/Classes/CiFilterView.m"
+            timestampString = "555589558.517215"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-animateTransition:"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-models"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NavigationTest/Classes/PullToRefresh/RefreshView.m"
+            timestampString = "556225119.430898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-setupFrame"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -51,29 +77,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NavigationTest/Tool/WXTransitionManager.m"
-            timestampString = "552900429.118304"
+            filePath = "NavigationTest/Classes/PullToRefresh/RefreshView.m"
+            timestampString = "556225119.431092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-animateTransition:"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-setupFrame"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NavigationTest/Classes/BaseClasses/BaseNavigationViewController.m"
-            timestampString = "553763008.803702"
+            filePath = "NavigationTest/Classes/PullToRefresh/UIScrollView+Refresh.m"
+            timestampString = "556269227.8317961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-prefersStatusBarHidden"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-setFz_header:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

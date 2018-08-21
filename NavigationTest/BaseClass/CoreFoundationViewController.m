@@ -7,43 +7,35 @@
 //
 
 #import "CoreFoundationViewController.h"
-
+#import "ProgressView.h"
+#import "CircularRunout.h"
 @interface CoreFoundationViewController ()
 @property (nonatomic,strong) UIImageView *imgView;
-
+@property (nonatomic,strong) ProgressView * hud;
+@property (nonatomic,strong) CircularRunout * circle;
 @end
 
 @implementation CoreFoundationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.imgView];
-//    [self wr_setNavBarBarTintColor:[UIColor redColor]];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.hud];
+    self.hud.center = self.view.center;
+    [self.view addSubview:self.circle];
+    [self.circle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(150, 150));
+        make.top.equalTo(self.view).offset(100);
+    }];
+    
+    
+
 }
-//-(void)viewDidAppear:(BOOL)animated{
-//    NSLog(@"%s",__FUNCTION__);
-//}
+
 -(void)viewWillAppear:(BOOL)animated{
     
     NSLog(@"%s",__FUNCTION__);
-}
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    [self loadImage];
-}
--(void)loadImage{
-    
-    
-    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"QQChatList" ofType:@"png"]], NULL);
-    CGImageRef ref = CGImageSourceCreateImageAtIndex(source, 0, NULL);
-    UIImage * image = [[UIImage alloc]initWithCGImage:ref];
-    
-    NSLog(@"%@",image);
-    self.imgView.image = image;
-    
 }
 -(UIImageView *)imgView{
     if (!_imgView) {
@@ -52,19 +44,20 @@
         _imgView.frame = self.view.bounds;
     }return _imgView;
 }
+-(ProgressView *)hud{
+    if (!_hud) {
+        _hud = [[ProgressView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    }return _hud;
+}
+-(CircularRunout *)circle{
+    if (!_circle) {
+        _circle = [[CircularRunout alloc]initWithFrame:CGRectMake(0, 0, 150,150)];
+    }return _circle;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -23,6 +23,7 @@
 #import "RotateViewController.h"
 #import "TestViewController.h"
 #import "UIDynamicViewController.h"
+
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * tableview;
@@ -94,9 +95,10 @@
     NSString * text = self.classNames[indexPath.row];
     NSString * name = self.dataArr[indexPath.row];
     UIViewController * control ;
-    if ([text isEqualToString:@"UIDynamicViewController"]) {
+    
+    if ([text isEqualToString:@"UIDynamicViewController"]|[text isEqualToString:@"RefreshViewController"]) {
         control = [[NSClassFromString(text) alloc]initWithNibName:text bundle:nil];
-    }else{
+    }else {
         control = [[NSClassFromString(text) alloc]init];
     }
     control.navigationItem.title = name;
@@ -108,12 +110,12 @@
 
 -(NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图",@"webview",@"加密",@"新组件",@"旋转",@"测试",@"悬浮按钮", nil];
+        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图",@"webview",@"加密",@"新组件",@"旋转",@"测试",@"悬浮按钮",@"删除动画",@"滤镜",@"下拉刷新", nil];
     }return _dataArr;
 }
 -(NSArray *)classNames{
     if (!_classNames) {
-        _classNames = [[NSArray alloc]initWithObjects:@"CoreFoundationViewController",@"CollectionViewController",@"RealmViewController",@"TextKitUViewController",@"GCDViewController",@"CornerTextViewController",@"NSPredicateController",@"PNChartViewController",@"WebViewViewController",@"EncryptionViewController",@"TempleViewController",@"RotateViewController",@"TestViewController",@"UIDynamicViewController", nil];
+        _classNames = [[NSArray alloc]initWithObjects:@"CoreFoundationViewController",@"CollectionViewController",@"RealmViewController",@"TextKitUViewController",@"GCDViewController",@"CornerTextViewController",@"NSPredicateController",@"PNChartViewController",@"WebViewViewController",@"EncryptionViewController",@"TempleViewController",@"RotateViewController",@"TestViewController",@"UIDynamicViewController",@"aaaViewController",@"CiFilterViewController",@"RefreshViewController", nil];
         
     }return _classNames;
 }

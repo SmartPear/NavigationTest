@@ -5,10 +5,12 @@ target 'NavigationTest' do
 pod 'MBProgressHUD'
 pod 'Masonry'
 pod 'PNChart'
-pod 'Spring'
+#pod 'Spring'
 #pod 'AsyncDisplayKit'
 #pod 'ReactiveCocoa'
-pod 'MJRefresh'
+#pod 'MJRefresh'
+pod 'FZRefresh', '~> 1.0'
+pod 'MJExtension', '~> 3.0.13'
 
 
 end
