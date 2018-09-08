@@ -22,8 +22,7 @@
 #import "TempleViewController.h"
 #import "RotateViewController.h"
 #import "TestViewController.h"
-#import "UIDynamicViewController.h"
-
+#import <FZRefresh/FZ_Refresh.h>
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * tableview;
@@ -47,7 +46,14 @@
     [self.tableview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    [self transFormTime];
+       __weak typeof(self) weakSelf = self;
+    RefreshHeaderView * header = [RefreshHeaderView headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableview.fz_header endRefresh];
+        });
+    } AnimationType:(AnimationTypeCustom)];
+    self.tableview.fz_header = header;
+//    [self transFormTime];
     
 }
 -(void)transFormTime{
@@ -93,7 +99,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString * text = self.classNames[indexPath.row];
-    NSString * name = self.dataArr[indexPath.row];
     UIViewController * control ;
     
     if ([text isEqualToString:@"UIDynamicViewController"]|[text isEqualToString:@"RefreshViewController"]) {
@@ -101,7 +106,7 @@
     }else {
         control = [[NSClassFromString(text) alloc]init];
     }
-    control.navigationItem.title = name;
+
     [self.navigationController pushViewController:control animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -110,12 +115,12 @@
 
 -(NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图",@"webview",@"加密",@"新组件",@"旋转",@"测试",@"悬浮按钮",@"删除动画",@"滤镜",@"下拉刷新", nil];
+        _dataArr = [[NSArray alloc]initWithObjects:@"Core Foundation",@"自定义Collection Layout",@"Realmx学习",@"TextKit",@"GCD",@"扇形显示文字",@"谓词",@"柱状图",@"webview",@"加密",@"新组件",@"旋转",@"测试",@"悬浮按钮",@"删除动画",@"滤镜",@"下拉刷新",@"视频播放", nil];
     }return _dataArr;
 }
 -(NSArray *)classNames{
     if (!_classNames) {
-        _classNames = [[NSArray alloc]initWithObjects:@"CoreFoundationViewController",@"CollectionViewController",@"RealmViewController",@"TextKitUViewController",@"GCDViewController",@"CornerTextViewController",@"NSPredicateController",@"PNChartViewController",@"WebViewViewController",@"EncryptionViewController",@"TempleViewController",@"RotateViewController",@"TestViewController",@"UIDynamicViewController",@"aaaViewController",@"CiFilterViewController",@"RefreshViewController", nil];
+        _classNames = [[NSArray alloc]initWithObjects:@"CoreFoundationViewController",@"CollectionViewController",@"RealmViewController",@"TextKitUViewController",@"GCDViewController",@"CornerTextViewController",@"NSPredicateController",@"PNChartViewController",@"WebViewViewController",@"EncryptionViewController",@"TempleViewController",@"RotateViewController",@"TestViewController",@"UIDynamicViewController",@"aaaViewController",@"CiFilterViewController",@"RefreshViewController",@"PlayerViewController", nil];
         
     }return _classNames;
 }

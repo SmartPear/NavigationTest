@@ -53,6 +53,7 @@
 		0312C75E205A709A002323DD /* 西狭颂039.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0312C75D205A709A002323DD /* 西狭颂039.jpg */; };
 		0312C760205A70A4002323DD /* 西狭颂041.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0312C75F205A70A4002323DD /* 西狭颂041.jpg */; };
 		03161D97207C958F003ED51E /* MyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03161D96207C958F003ED51E /* MyTextView.m */; };
+		031A00BF212EBA5300257F42 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031A00BE212EBA5300257F42 /* PlayerViewController.m */; };
 		031B36CB211D6A3100381FC2 /* CiFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B36CA211D6A3100381FC2 /* CiFilterViewController.m */; };
 		031B36CE211D6AF600381FC2 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B36CD211D6AF600381FC2 /* ImageUtil.m */; };
 		031B36D0211D6B5F00381FC2 /* IMG_0332.png in Resources */ = {isa = PBXBuildFile; fileRef = 031B36CF211D6B5F00381FC2 /* IMG_0332.png */; };
@@ -61,9 +62,6 @@
 		031B36DA211D788900381FC2 /* CiFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 031B36D8211D788900381FC2 /* CiFilterTableViewCell.m */; };
 		031B36DB211D788900381FC2 /* CiFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031B36D9211D788900381FC2 /* CiFilterTableViewCell.xib */; };
 		031EA5E92075EAC50042E7A9 /* TideLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031EA5E82075EAC50042E7A9 /* TideLayerViewController.m */; };
-		03246E892117F092008C4220 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03246E872117F092008C4220 /* CustomCollectionViewCell.m */; };
-		03246E8A2117F092008C4220 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03246E882117F092008C4220 /* CustomCollectionViewCell.xib */; };
-		0326F4E72105782F0070C678 /* BezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0326F4E62105782F0070C678 /* BezierView.m */; };
 		033147EB20EF091B00B66FF1 /* WXTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033147EA20EF091B00B66FF1 /* WXTransitionManager.m */; };
 		0339DD0C204928D7000C7979 /* RealmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0339DD0B204928D7000C7979 /* RealmViewController.m */; };
 		0339DD10204929A2000C7979 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0339DD0F204929A2000C7979 /* Realm.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -77,19 +75,6 @@
 		037232942064A98C0000BD39 /* CornerTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037232932064A98C0000BD39 /* CornerTextViewController.m */; };
 		037232972064BDED0000BD39 /* CornerTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 037232962064BDED0000BD39 /* CornerTextView.m */; };
 		038F84DD20AD235900B95D50 /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038F84DC20AD235900B95D50 /* WebViewViewController.m */; };
-		0396B6B8212A7C4E00B58A12 /* RefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6A7212A7C4E00B58A12 /* RefreshFooterView.m */; };
-		0396B6B9212A7C4E00B58A12 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6AC212A7C4E00B58A12 /* UIScrollView+Refresh.m */; };
-		0396B6BA212A7C4E00B58A12 /* UIScrollView+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6AD212A7C4E00B58A12 /* UIScrollView+Custom.m */; };
-		0396B6BB212A7C4E00B58A12 /* RefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6AE212A7C4E00B58A12 /* RefreshComponent.m */; };
-		0396B6BC212A7C4E00B58A12 /* NormalAniationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6AF212A7C4E00B58A12 /* NormalAniationView.m */; };
-		0396B6BD212A7C4E00B58A12 /* BaseAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6B0212A7C4E00B58A12 /* BaseAnimationView.m */; };
-		0396B6BE212A7C4E00B58A12 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6B2212A7C4E00B58A12 /* AnimationView.m */; };
-		0396B6BF212A7C4E00B58A12 /* RefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396B6B3212A7C4E00B58A12 /* RefreshHeaderView.m */; };
-		03996C05210176A700A5D4FD /* UIDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03996C04210176A700A5D4FD /* UIDynamicViewController.m */; };
-		03996C0721017B7D00A5D4FD /* UIDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03996C0621017B7D00A5D4FD /* UIDynamicViewController.xib */; };
-		03996C0A21018AAD00A5D4FD /* AttachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03996C0921018AAD00A5D4FD /* AttachView.m */; };
-		03996C0E2101BDF300A5D4FD /* aaaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03996C0C2101BDF300A5D4FD /* aaaViewController.m */; };
-		03996C0F2101BDF300A5D4FD /* aaaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03996C0D2101BDF300A5D4FD /* aaaViewController.xib */; };
 		0399C36B20EDBFB800906224 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0399C36A20EDBFB800906224 /* TestViewController.m */; };
 		039A682B21216EF100A2BE8B /* CircularRunout.m in Sources */ = {isa = PBXBuildFile; fileRef = 039A682A21216EF100A2BE8B /* CircularRunout.m */; };
 		03A50601202AE66E00BBEAFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A50600202AE66E00BBEAFD /* AppDelegate.m */; };
@@ -105,6 +90,7 @@
 		03B191DA2090920400EF12EB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B191D92090920400EF12EB /* BaseViewController.m */; };
 		03C1882720D0FD1E005174DA /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C1882620D0FD1E005174DA /* BaseNavigationViewController.m */; };
 		03C1882A20D0FD6C005174DA /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C1882920D0FD6C005174DA /* RotateViewController.m */; };
+		03C6A43C212C7F4E00313444 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C6A43A212C7F4E00313444 /* CustomCollectionViewCell.m */; };
 		03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B02046462B0096810F /* CollectionViewController.m */; };
 		03CFC7B52046A1730096810F /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CFC7B42046A1730096810F /* FlowLayout.m */; };
 		03DBF23620849F0000975EAA /* NSPredicateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DBF23520849F0000975EAA /* NSPredicateController.m */; };
@@ -114,7 +100,7 @@
 		03DD19DB208F2250003D5D61 /* PNChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DD19DA208F2250003D5D61 /* PNChartViewController.m */; };
 		03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A01205F58270041AFCE /* MBProgressHUD+Add.m */; };
 		03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EA3392204CE0510060FC7F /* TextKitUViewController.m */; };
-		2B0088599F9843C46449534F /* Pods_NavigationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E96C37E70A689A03EC52B2 /* Pods_NavigationTest.framework */; };
+		66EBB88897FF2C5C62CB86EA /* Pods_NavigationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD808372B865E550F103FA2 /* Pods_NavigationTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +170,8 @@
 		0312C75F205A70A4002323DD /* 西狭颂041.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "西狭颂041.jpg"; sourceTree = "<group>"; };
 		03161D95207C958F003ED51E /* MyTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTextView.h; sourceTree = "<group>"; };
 		03161D96207C958F003ED51E /* MyTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTextView.m; sourceTree = "<group>"; };
+		031A00BD212EBA5300257F42 /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		031A00BE212EBA5300257F42 /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		031B36C9211D6A3100381FC2 /* CiFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CiFilterViewController.h; sourceTree = "<group>"; };
 		031B36CA211D6A3100381FC2 /* CiFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CiFilterViewController.m; sourceTree = "<group>"; };
 		031B36CC211D6AF600381FC2 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
@@ -198,11 +186,6 @@
 		031B36D9211D788900381FC2 /* CiFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CiFilterTableViewCell.xib; sourceTree = "<group>"; };
 		031EA5E72075EAC50042E7A9 /* TideLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TideLayerViewController.h; sourceTree = "<group>"; };
 		031EA5E82075EAC50042E7A9 /* TideLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TideLayerViewController.m; sourceTree = "<group>"; };
-		03246E862117F092008C4220 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
-		03246E872117F092008C4220 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
-		03246E882117F092008C4220 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		0326F4E52105782F0070C678 /* BezierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierView.h; sourceTree = "<group>"; };
-		0326F4E62105782F0070C678 /* BezierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierView.m; sourceTree = "<group>"; };
 		033147E920EF091B00B66FF1 /* WXTransitionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTransitionManager.h; sourceTree = "<group>"; };
 		033147EA20EF091B00B66FF1 /* WXTransitionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTransitionManager.m; sourceTree = "<group>"; };
 		0339DD0A204928D7000C7979 /* RealmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmViewController.h; sourceTree = "<group>"; };
@@ -228,31 +211,6 @@
 		037232962064BDED0000BD39 /* CornerTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerTextView.m; sourceTree = "<group>"; };
 		038F84DB20AD235900B95D50 /* WebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewViewController.h; sourceTree = "<group>"; };
 		038F84DC20AD235900B95D50 /* WebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewViewController.m; sourceTree = "<group>"; };
-		0396B6A7212A7C4E00B58A12 /* RefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshFooterView.m; sourceTree = "<group>"; };
-		0396B6A8212A7C4E00B58A12 /* BaseAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimationView.h; sourceTree = "<group>"; };
-		0396B6A9212A7C4E00B58A12 /* Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Refresh.h; sourceTree = "<group>"; };
-		0396B6AA212A7C4E00B58A12 /* RefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshHeaderView.h; sourceTree = "<group>"; };
-		0396B6AB212A7C4E00B58A12 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
-		0396B6AC212A7C4E00B58A12 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
-		0396B6AD212A7C4E00B58A12 /* UIScrollView+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Custom.m"; sourceTree = "<group>"; };
-		0396B6AE212A7C4E00B58A12 /* RefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshComponent.m; sourceTree = "<group>"; };
-		0396B6AF212A7C4E00B58A12 /* NormalAniationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalAniationView.m; sourceTree = "<group>"; };
-		0396B6B0212A7C4E00B58A12 /* BaseAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimationView.m; sourceTree = "<group>"; };
-		0396B6B1212A7C4E00B58A12 /* RefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshFooterView.h; sourceTree = "<group>"; };
-		0396B6B2212A7C4E00B58A12 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
-		0396B6B3212A7C4E00B58A12 /* RefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshHeaderView.m; sourceTree = "<group>"; };
-		0396B6B4212A7C4E00B58A12 /* RefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshComponent.h; sourceTree = "<group>"; };
-		0396B6B5212A7C4E00B58A12 /* UIScrollView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Custom.h"; sourceTree = "<group>"; };
-		0396B6B6212A7C4E00B58A12 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
-		0396B6B7212A7C4E00B58A12 /* NormalAniationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalAniationView.h; sourceTree = "<group>"; };
-		03996C03210176A700A5D4FD /* UIDynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDynamicViewController.h; sourceTree = "<group>"; };
-		03996C04210176A700A5D4FD /* UIDynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDynamicViewController.m; sourceTree = "<group>"; };
-		03996C0621017B7D00A5D4FD /* UIDynamicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIDynamicViewController.xib; sourceTree = "<group>"; };
-		03996C0821018AAD00A5D4FD /* AttachView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttachView.h; sourceTree = "<group>"; };
-		03996C0921018AAD00A5D4FD /* AttachView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttachView.m; sourceTree = "<group>"; };
-		03996C0B2101BDF300A5D4FD /* aaaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aaaViewController.h; sourceTree = "<group>"; };
-		03996C0C2101BDF300A5D4FD /* aaaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aaaViewController.m; sourceTree = "<group>"; };
-		03996C0D2101BDF300A5D4FD /* aaaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = aaaViewController.xib; sourceTree = "<group>"; };
 		0399C36920EDBFB800906224 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0399C36A20EDBFB800906224 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		039A682921216EF100A2BE8B /* CircularRunout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularRunout.h; sourceTree = "<group>"; };
@@ -283,6 +241,8 @@
 		03C1882620D0FD1E005174DA /* BaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		03C1882820D0FD6C005174DA /* RotateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateViewController.h; sourceTree = "<group>"; };
 		03C1882920D0FD6C005174DA /* RotateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotateViewController.m; sourceTree = "<group>"; };
+		03C6A43A212C7F4E00313444 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		03C6A43B212C7F4E00313444 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		03CFC7AF2046462B0096810F /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		03CFC7B02046462B0096810F /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		03CFC7B32046A1730096810F /* FlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
@@ -304,7 +264,7 @@
 		03EA3392204CE0510060FC7F /* TextKitUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextKitUViewController.m; sourceTree = "<group>"; };
 		22C499E2252E0BCC3266A31A /* Pods-NavigationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest.release.xcconfig"; sourceTree = "<group>"; };
 		338305CC1E3114EA25E46EF5 /* Pods-NavigationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest.debug.xcconfig"; sourceTree = "<group>"; };
-		77E96C37E70A689A03EC52B2 /* Pods_NavigationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD808372B865E550F103FA2 /* Pods_NavigationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0339DD10204929A2000C7979 /* Realm.framework in Frameworks */,
-				2B0088599F9843C46449534F /* Pods_NavigationTest.framework in Frameworks */,
+				66EBB88897FF2C5C62CB86EA /* Pods_NavigationTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +356,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		031A00BC212EBA3300257F42 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				031A00BD212EBA5300257F42 /* PlayerViewController.h */,
+				031A00BE212EBA5300257F42 /* PlayerViewController.m */,
+			);
+			name = AVPlayer;
+			sourceTree = "<group>";
+		};
 		031EA5E62075EA760042E7A9 /* TideLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,8 +431,7 @@
 		035ECD4820CE5A18001B4F60 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0396B6A6212A7C4E00B58A12 /* Refresh */,
-				03996C022101768F00A5D4FD /* UIDynamicTest */,
+				031A00BC212EBA3300257F42 /* AVPlayer */,
 				0399C36820EDBF9800906224 /* TestController */,
 				03C1882B20D0FD70005174DA /* RotateController */,
 				03C1882420D0FD06005174DA /* BaseClasses */,
@@ -522,50 +490,6 @@
 				038F84DC20AD235900B95D50 /* WebViewViewController.m */,
 			);
 			path = WebVIEW;
-			sourceTree = "<group>";
-		};
-		0396B6A6212A7C4E00B58A12 /* Refresh */ = {
-			isa = PBXGroup;
-			children = (
-				0396B6A7212A7C4E00B58A12 /* RefreshFooterView.m */,
-				0396B6A8212A7C4E00B58A12 /* BaseAnimationView.h */,
-				0396B6A9212A7C4E00B58A12 /* Refresh.h */,
-				0396B6AA212A7C4E00B58A12 /* RefreshHeaderView.h */,
-				0396B6AB212A7C4E00B58A12 /* AnimationView.h */,
-				0396B6AC212A7C4E00B58A12 /* UIScrollView+Refresh.m */,
-				0396B6AD212A7C4E00B58A12 /* UIScrollView+Custom.m */,
-				0396B6AE212A7C4E00B58A12 /* RefreshComponent.m */,
-				0396B6AF212A7C4E00B58A12 /* NormalAniationView.m */,
-				0396B6B0212A7C4E00B58A12 /* BaseAnimationView.m */,
-				0396B6B1212A7C4E00B58A12 /* RefreshFooterView.h */,
-				0396B6B2212A7C4E00B58A12 /* AnimationView.m */,
-				0396B6B3212A7C4E00B58A12 /* RefreshHeaderView.m */,
-				0396B6B4212A7C4E00B58A12 /* RefreshComponent.h */,
-				0396B6B5212A7C4E00B58A12 /* UIScrollView+Custom.h */,
-				0396B6B6212A7C4E00B58A12 /* UIScrollView+Refresh.h */,
-				0396B6B7212A7C4E00B58A12 /* NormalAniationView.h */,
-			);
-			path = Refresh;
-			sourceTree = "<group>";
-		};
-		03996C022101768F00A5D4FD /* UIDynamicTest */ = {
-			isa = PBXGroup;
-			children = (
-				03996C03210176A700A5D4FD /* UIDynamicViewController.h */,
-				03996C04210176A700A5D4FD /* UIDynamicViewController.m */,
-				03996C0621017B7D00A5D4FD /* UIDynamicViewController.xib */,
-				03996C0821018AAD00A5D4FD /* AttachView.h */,
-				03996C0921018AAD00A5D4FD /* AttachView.m */,
-				03996C0B2101BDF300A5D4FD /* aaaViewController.h */,
-				03996C0C2101BDF300A5D4FD /* aaaViewController.m */,
-				03996C0D2101BDF300A5D4FD /* aaaViewController.xib */,
-				03246E862117F092008C4220 /* CustomCollectionViewCell.h */,
-				03246E872117F092008C4220 /* CustomCollectionViewCell.m */,
-				03246E882117F092008C4220 /* CustomCollectionViewCell.xib */,
-				0326F4E52105782F0070C678 /* BezierView.h */,
-				0326F4E62105782F0070C678 /* BezierView.m */,
-			);
-			path = UIDynamicTest;
 			sourceTree = "<group>";
 		};
 		0399C36820EDBF9800906224 /* TestController */ = {
@@ -699,6 +623,8 @@
 		03CFC7B22046A13F0096810F /* CollectionCustom */ = {
 			isa = PBXGroup;
 			children = (
+				03C6A43B212C7F4E00313444 /* CustomCollectionViewCell.h */,
+				03C6A43A212C7F4E00313444 /* CustomCollectionViewCell.m */,
 				03CFC7AF2046462B0096810F /* CollectionViewController.h */,
 				03CFC7B02046462B0096810F /* CollectionViewController.m */,
 				03CFC7B32046A1730096810F /* FlowLayout.h */,
@@ -761,7 +687,7 @@
 		F90CD6376942F249996F4BFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77E96C37E70A689A03EC52B2 /* Pods_NavigationTest.framework */,
+				6BD808372B865E550F103FA2 /* Pods_NavigationTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -778,7 +704,6 @@
 				03A505F9202AE66E00BBEAFD /* Frameworks */,
 				03A505FA202AE66E00BBEAFD /* Resources */,
 				7FBF0EF8BA85B9E222CA15B7 /* [CP] Embed Pods Frameworks */,
-				BD59E3BC3405C3979ACDA5B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -890,7 +815,6 @@
 				0312C74F205A65E5002323DD /* 西狭颂014.jpg in Resources */,
 				0312C723205A5AE2002323DD /* 西狭颂024.jpg in Resources */,
 				03A5060C202AE66E00BBEAFD /* LaunchScreen.storyboard in Resources */,
-				03996C0721017B7D00A5D4FD /* UIDynamicViewController.xib in Resources */,
 				0312C729205A5AE2002323DD /* 西狭颂033.jpg in Resources */,
 				0312C726205A5AE2002323DD /* 西狭颂025.jpg in Resources */,
 				03A50609202AE66E00BBEAFD /* Assets.xcassets in Resources */,
@@ -906,11 +830,9 @@
 				0312C75C205A7096002323DD /* 西狭颂040.jpg in Resources */,
 				0312C749205A65E5002323DD /* 西狭颂005.jpg in Resources */,
 				0312C724205A5AE2002323DD /* 西狭颂031.jpg in Resources */,
-				03996C0F2101BDF300A5D4FD /* aaaViewController.xib in Resources */,
 				03578BA52043A76A0009D91C /* 西狭颂001.jpg in Resources */,
 				0312C72E205A5AE2002323DD /* 西狭颂032.jpg in Resources */,
 				0312C727205A5AE2002323DD /* 西狭颂026.jpg in Resources */,
-				03246E8A2117F092008C4220 /* CustomCollectionViewCell.xib in Resources */,
 				0312C754205A65E5002323DD /* 西狭颂020.jpg in Resources */,
 				0312C752205A65E5002323DD /* 西狭颂004.jpg in Resources */,
 				0312C757205A65E5002323DD /* 西狭颂003.jpg in Resources */,
@@ -971,7 +893,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationTest/Pods-NavigationTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FZRefresh/FZRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
@@ -990,22 +912,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD59E3BC3405C3979ACDA5B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NavigationTest/Pods-NavigationTest-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationTest/Pods-NavigationTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1018,46 +925,36 @@
 				03DD19D3208EC00E003D5D61 /* UserViewController.m in Sources */,
 				03A50636202AEA3E00BBEAFD /* UIViewController+Caterory.m in Sources */,
 				0399C36B20EDBFB800906224 /* TestViewController.m in Sources */,
-				0396B6BE212A7C4E00B58A12 /* AnimationView.m in Sources */,
 				038F84DD20AD235900B95D50 /* WebViewViewController.m in Sources */,
-				0396B6BF212A7C4E00B58A12 /* RefreshHeaderView.m in Sources */,
 				03E64A02205F58280041AFCE /* MBProgressHUD+Add.m in Sources */,
-				0396B6B9212A7C4E00B58A12 /* UIScrollView+Refresh.m in Sources */,
 				033147EB20EF091B00B66FF1 /* WXTransitionManager.m in Sources */,
-				0396B6B8212A7C4E00B58A12 /* RefreshFooterView.m in Sources */,
 				03A50604202AE66E00BBEAFD /* ViewController.m in Sources */,
 				03DD19D0208EBEC5003D5D61 /* MainViewController.m in Sources */,
-				0326F4E72105782F0070C678 /* BezierView.m in Sources */,
-				03996C05210176A700A5D4FD /* UIDynamicViewController.m in Sources */,
 				03DBF23620849F0000975EAA /* NSPredicateController.m in Sources */,
 				03EA3393204CE0510060FC7F /* TextKitUViewController.m in Sources */,
 				037232972064BDED0000BD39 /* CornerTextView.m in Sources */,
 				03444B4421197F5200D7C042 /* ProgressView.m in Sources */,
 				031B36D3211D6DB300381FC2 /* CiFilterView.m in Sources */,
-				0396B6BA212A7C4E00B58A12 /* UIScrollView+Custom.m in Sources */,
-				0396B6BD212A7C4E00B58A12 /* BaseAnimationView.m in Sources */,
 				03C1882A20D0FD6C005174DA /* RotateViewController.m in Sources */,
 				03DD19DB208F2250003D5D61 /* PNChartViewController.m in Sources */,
 				031B36DA211D788900381FC2 /* CiFilterTableViewCell.m in Sources */,
 				0339DD13204929C0000C7979 /* Person.m in Sources */,
 				03CFC7B12046462B0096810F /* CollectionViewController.m in Sources */,
 				03B191DA2090920400EF12EB /* BaseViewController.m in Sources */,
-				0396B6BC212A7C4E00B58A12 /* NormalAniationView.m in Sources */,
 				03A5060F202AE66E00BBEAFD /* main.m in Sources */,
+				031A00BF212EBA5300257F42 /* PlayerViewController.m in Sources */,
 				031EA5E92075EAC50042E7A9 /* TideLayerViewController.m in Sources */,
 				03B191D72090908B00EF12EB /* ExmapleViewController.m in Sources */,
-				03246E892117F092008C4220 /* CustomCollectionViewCell.m in Sources */,
 				03161D97207C958F003ED51E /* MyTextView.m in Sources */,
 				031B36D6211D73A100381FC2 /* CiFilterModel.m in Sources */,
 				03578BA32043A64F0009D91C /* CoreFoundationViewController.m in Sources */,
-				0396B6BB212A7C4E00B58A12 /* RefreshComponent.m in Sources */,
 				0312C6FC205A1CD6002323DD /* GCDViewController.m in Sources */,
 				03DD19D6208F0E04003D5D61 /* UIViewController+SlidMenu.m in Sources */,
-				03996C0E2101BDF300A5D4FD /* aaaViewController.m in Sources */,
 				037232942064A98C0000BD39 /* CornerTextViewController.m in Sources */,
 				03CFC7B52046A1730096810F /* FlowLayout.m in Sources */,
 				03A50601202AE66E00BBEAFD /* AppDelegate.m in Sources */,
 				0339DD0C204928D7000C7979 /* RealmViewController.m in Sources */,
+				03C6A43C212C7F4E00313444 /* CustomCollectionViewCell.m in Sources */,
 				0312C70C205A4DE1002323DD /* TideView.m in Sources */,
 				036D675F20C033C800A68F9F /* EncryptionViewController.m in Sources */,
 				03C1882720D0FD1E005174DA /* BaseNavigationViewController.m in Sources */,
@@ -1065,7 +962,6 @@
 				031B36CB211D6A3100381FC2 /* CiFilterViewController.m in Sources */,
 				0356E0A420F48C6B00B05C1B /* GLTransitionAnimation.m in Sources */,
 				039A682B21216EF100A2BE8B /* CircularRunout.m in Sources */,
-				03996C0A21018AAD00A5D4FD /* AttachView.m in Sources */,
 				031B36CE211D6AF600381FC2 /* ImageUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
