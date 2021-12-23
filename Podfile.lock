@@ -15,7 +15,7 @@ DEPENDENCIES:
   - PNChart
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - FZRefresh
     - Masonry
     - MBProgressHUD
@@ -33,4 +33,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 59762f10c533cfb0a6b6d49009187215065df1fb
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.11.2
